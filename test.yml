@@ -1,0 +1,7 @@
+name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- script: echo $(Build.BuildNumber) //output updated build number
