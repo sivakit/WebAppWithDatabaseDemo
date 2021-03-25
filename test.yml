@@ -18,5 +18,5 @@ steps:
      scriptType: inlineScript
      arguments: '-buildTextPath "$(Build.Name)"'
      inlineScript: |
-     param($buildTextPath)
-     Write-Host ""Hello World $(Build.BuildNumber) $(Build.Name)""
+        param($buildTextPath)
+        Write-Host ""Hello World $(Build.BuildNumber) $(Build.Name)""
