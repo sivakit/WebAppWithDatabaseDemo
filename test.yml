@@ -3,6 +3,8 @@ pool:
 
 variables: 
   Build.Name: 'test'
+  Build.Folder.Drop.Base: 'C:\taz\buildstaging$\IA.Core\AppServer\1.0.1\BuildCount.txt.txt'
+
 steps:
 - script: echo $(Build.BuildNumber) //output updated build number
 - task: PowerShell@2
@@ -16,7 +18,7 @@ steps:
   displayName: 'Update Build Version'
   inputs:
      scriptType: inlineScript
-     arguments: '-buildTextPath "$(Build.Name)"'
+     arguments: '-buildTextPath "$(Build.Folder.Drop.Base)"'
      inlineScript: |
         param($buildTextPath)
         Write-Host ""Hello World $(Build.BuildNumber) $(Build.Name)""
