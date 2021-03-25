@@ -2,7 +2,7 @@ pool:
   name: Mine
 
 variables:
-  Build.Folder.Drop.Base: 'C:\taz\buildstaging$\IA.Core\AppServer\1.0.1\BuildCount.txt.txt'
+  Build.Folder.Drop.Base: 'C:\taz\buildstaging$\IA.Core\AppServer\1.0.1'
   Build.Version.Count: '-100'
 steps:
 - task: PowerShell@1
