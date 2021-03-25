@@ -32,4 +32,4 @@ steps:
   displayName: 'Update Build Version in scope to tag repo using using built in BuildNumber variable'
   inputs:
     scriptType: inlineScript
-    inlineScript: 'Write-Host "##vso[build.updatebuildnumber].$(Build.Version.Count)"'
+    inlineScript: 'Write-Host "##vso[build.updatebuildnumber].$(Build.Version.Product).$(Build.Version.Count)"'
