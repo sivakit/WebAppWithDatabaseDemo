@@ -28,3 +28,8 @@ steps:
         Write-Host "##vso[task.setvariable variable=Build.Version.Count]$newCount"
        }
      }
+- task: PowerShell@1
+  displayName: 'Update Build Version in scope to tag repo using using built in BuildNumber variable'
+  inputs:
+    scriptType: inlineScript
+    inlineScript: 'Write-Host "##vso[build.updatebuildnumber]$(Build.Version.Product).$(Build.Version.Count)"'
