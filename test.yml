@@ -2,7 +2,7 @@ pool:
   name: Mine
 
 variables:
-  Build.Version.Prodcut: '1.0.1'
+  Build.Version.Prodcut: '7.01.01'
   Build.Folder.Drop.Base: 'C:\agent\taz\buildstaging$\IA.Core\AppServer\$(Build.Version.Prodcut)'
   Build.Version.Count: '-100'
 steps:
@@ -32,4 +32,4 @@ steps:
   displayName: 'Update Build Version in scope to tag repo using using built in BuildNumber variable'
   inputs:
     scriptType: inlineScript
-    inlineScript: 'Write-Host "##vso[build.updatebuildnumber].$(Build.Version.Prodcut).$(Build.Version.Count)"'
+    inlineScript: 'Write-Host "##vso[build.updatebuildnumber]$(Build.Version.Product).$(Build.Version.Count)"'
