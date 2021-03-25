@@ -13,7 +13,7 @@ steps:
     errorActionPreference: 'continue'
     
 - task: PowerShell@2
-   displayName: 'Update Build Version'
+  displayName: 'Update Build Version'
    inputs:
      scriptType: inlineScript
      arguments: '-buildTextPath "$(Build.Name)"'
