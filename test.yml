@@ -11,3 +11,11 @@ steps:
     script: |    
       Write-Host "Hello World $(Build.BuildNumber) $(Build.Name)"
     errorActionPreference: 'continue'
+ - task: PowerShell@1
+   displayName: 'Update Build Version'
+   inputs:
+     scriptType: inlineScript
+     arguments: '-buildTextPath "$(Build.Name)"'
+     inlineScript: |
+     param($buildTextPath)
+     Write-Host ""Hello World $(Build.BuildNumber) $(Build.Name)""
