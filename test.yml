@@ -2,8 +2,8 @@ pool:
   name: Mine
 
 variables:
-  Build.Version.Prodcut: '7.01.01'
-  Build.Folder.Drop.Base: 'C:\agent\taz\buildstaging$\IA.Core\AppServer\$(Build.Version.Prodcut)'
+  Build.Version.Product: '7.01.01'
+  Build.Folder.Drop.Base: 'C:\agent\taz\buildstaging$\IA.Core\AppServer\$(Build.Version.Product)'
   Build.Version.Count: '-100'
 steps:
 - task: PowerShell@1
