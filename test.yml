@@ -14,7 +14,7 @@ steps:
     
 - task: PowerShell@2
   displayName: 'Update Build Version'
-   inputs:
+  inputs:
      scriptType: inlineScript
      arguments: '-buildTextPath "$(Build.Name)"'
      inlineScript: |
